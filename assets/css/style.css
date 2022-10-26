@@ -1,3 +1,12 @@
+:root{
+    --color-font-primary : #727272;
+    --color-active :  #39aae1;
+    --color-text-hover: #ffff;
+    --color-option-one : #39aae1;
+    --color-option-two : #0079c7;
+    --color-option-three : #2b4c99;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -17,8 +26,145 @@ header .logo{
 
 .container{
     width: 990px;
-    border: 1px solid red;
     display: flex;
     justify-content: space-between;
 }
+
+.menu{
+    display: flex;
+    align-items: center;
+}
+
+nav ul, nav li{
+    list-style:none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul{
+    display: flex;
+}
+
+nav li a{
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: var(--color-font-primary);
+}
+
+nav .active a, nav a:hover{
+    background-color: var(--color-active);
+    color: var(--color-text-hover);
+}
+
+section.banner{
+    display: flex;
+    justify-content: center;
+    height: 670px;
+    background:linear-gradient(to right, rgba(0,0,0,1) 20%, rgba(0,0,0, .7) 40%, rgba(0,0,0,.4) 70%, rgba(0,0,0,0) 100%), url(/assets/images/homem\ vendo\ passagem.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.column{
+    flex-direction: column;
+}
+
+.banner_textHeaderLine{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.banner_textHeaderLine h1{
+    width: 300px;
+    margin: 0;
+    padding: 0;
+    color: var(--color-text-hover);
+    font-size: 70px;
+    text-shadow: 1px 1px 0px var(--color-font-primary);
+    
+}
+
+.banner_textHeaderLine h2{
+    max-width: 350px;
+    margin: 0;
+    padding: 0;
+    margin-top: 21px;
+    color: var(--color-text-hover);
+    font-size: 19px;
+    text-shadow: 1px 1px 0px var(--color-font-primary);
+    
+}
+
+.banner_options{
+    height: 210px;
+    display: flex;
+}
+
+.opcao1, .opcao2, .opcao3{
+    flex: 1;
+    color: var(--color-text-hover);
+    padding: 20px;
+}
+
+.opcao1{
+    background: var(--color-option-one);
+}
+
+.opcao2{
+    background: var(--color-option-two);
+}
+
+.opcao3{
+    background: var(--color-option-three);
+}
+
+.opcaoTitle{
+    font-size: 21px;
+}
+
+.linkBottom img{
+    width: 20px;
+    height: 20px;
+    margin-left: 4px;
+} 
+
+
+.banner_descr{
+    font-size: 12px;
+    margin-block: 20px;
+    text-align: justify;
+}
+
+.linkBottom{
+    width: 110px;
+    border: 1px solid var(--color-text-hover);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.banner_options a{
+    padding: 5px;
+    font-size: 14px;
+    text-decoration: none;
+    color: var(--color-text-hover);
+}
+
+
+
+.bannerHours{
+    margin-top: 10px;
+}
+
+.contentHours{
+    border-bottom: 1px solid #ccc;
+    padding-block: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
 
